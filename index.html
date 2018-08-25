@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+    <h1>Please Enter Your Details For Our Dating Site</h1>
+    <div>
+    <form method="post" enctype="multipart/formdata"  action="https://">
+        <fieldset>
+            <legend>Your Face</legend> 
+            <label for="Your Image">Your Image</label> 
+            <input type="file" name="Your Image" required id="src"><br>
+            <label for="Preview">Image Preview</label><img name="Preview" id="target"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Your General Details</legend>
+            <label for="name">Name</label> 
+            <input type="text" name="name" required=""><br>
+            <label for="Gender" >Gender</label>
+            <input type="radio" name="gender" value="Male" class="fitauto" required=""> Male <input type="radio" name="gender" value="Female" class="fitauto" required=""> Female <br>
+            <label for="age">Age</label>
+            <input type="number" name="age" required=""><br>
+            <label for="DOB">Date of Birth</label>
+            <input type="date" name="DOB"><br>   
+            <label for="color">Favorite Color</label>
+            <input type="color" name="color"><br>
+            <label for="country" >Which Country</label>
+            <select name="country">
+                        <option value="IN">India</option>
+                        <option value="HK">HongKong</option>
+                        <option value="CN">China</option>
+                        <option value="JP">Japan</option>
+                        <option value="US">USA</option>
+                        <option value="SG">Singapore</option>
+                        <option value="OT"></option>
+            </select>
+            
+        <br>
+        </fieldset>
+        <fieldset>
+            <legend>Your Indicators</legend>
+            <label for="height">Height</label> <span>SHORT</span><input type="range" min ="0" max = "100 name="height" step ="1" value="50"><span> TALL</span> <br>
+            <label for="salary">Salary </label> <span>RICH</span> <input type="range" min ="0" max = "100 name="height" step ="1" value="50"> <span>POOR</span><br>
+        </fieldset>
+        <fieldset>
+            <legend>Your General Details</legend>
+            <label for="email">Email</label>
+            <input type="email" name="email" required=""><br>
+            <label for="mobile">Mobile</label>
+            <input type="number" name="Mobile"><br>
+            <label for="address">Address</label>
+            <textarea rows="2" cols="50" name="Address"></textarea><br>
+            <label for="MOC">Method to Contact you </label>
+            <input type="checkbox" value="email" name="MOC" class="fitauto"> Email <input type="checkbox" value="Mobile" name="MOC" class="fitauto"> Mobile<input type="checkbox" value="Residence" name="MOC" class="fitauto"> Residence <br>  
+        </fieldset>    
+
+        <input type="Submit" value="Send">
+    </form>
+    </div>    
+<script >
+        function showImage(src,target) {
+                var fr=new FileReader();
+                // when image is loaded, set the src of the image where you want to display it
+                    fr.onload = function(e) { target.src = this.result; };
+                        src.addEventListener("change",function() {
+                    // fill fr with image data    
+                fr.readAsDataURL(src.files[0]);
+                });
+}
+
+var src = document.getElementById("src");
+var target = document.getElementById("target");
+showImage(src,target);
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+/* Get Rid of all padding */
+
+
+* {
+    margin:0px; 
+    padding:0px;
+    list-style-type:none;
+    font-family:Tahoma;
+    }
+h1{
+	background-color: grey;
+	width: 740Px;
+	font-size: 20px;
+	text-align: center;
+}
+
+fieldset{
+background-color:lightyellow;
+border:10px	solid yellow; 
+margin-bottom: 10px;
+width: 720px;
+}
+
+textarea{
+		width:360px;
+		height: 50px;
+}
+
+label{
+	width: 220px;
+	display: inline-block;
+	text-align: right;
+	text-align: top;
+	padding: 2px
+}
+
+.fitauto{
+	width: auto;
+}
+
+label:hover{
+	font-size:20px;
+        color:blue;
+}
+
+span{
+	text-align: center;
+	background-color: lightblue;
+	font-size:10px;
+	text-align: top;
+
+}
